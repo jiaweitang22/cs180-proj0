@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CS180 Project 0: Becoming Friends with Your Camera — an exploration of perspective, focal length, and the dolly zoom.">
+  <title>Project 0 — Becoming Friends with Your Camera</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>CS 180 · PROJECT 0</span>
+    </a>
+    <nav aria-label="Project sections">
+      <a href="#portrait">Portrait</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#dolly">Dolly zoom</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Perspective · Focal length · Center of projection</p>
+        <h1 id="page-title">Becoming friends<br>with my <em>camera.</em></h1>
+        <p class="lede">Three small experiments with an iPhone 17 Pro reveal how moving the camera changes space—and how zoom changes the frame.</p>
+        <a class="scroll-link" href="#portrait">
+          Explore the experiments
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+      <div class="hero-graphic reveal" aria-hidden="true">
+        <div class="aperture aperture-one"></div>
+        <div class="aperture aperture-two"></div>
+        <div class="focus-point"></div>
+        <span class="graphic-label label-near">NEAR</span>
+        <span class="graphic-label label-far">FAR</span>
+      </div>
+    </section>
+
+    <section class="project-section" id="portrait" aria-labelledby="portrait-title">
+      <div class="section-intro reveal">
+        <p class="section-number">01</p>
+        <div>
+          <p class="eyebrow">Selfie: the wrong way vs. the right way</p>
+          <h2 id="portrait-title">Distance reshapes a face.</h2>
+          <p>For the first image, I photographed the subject from close range at 1×. For the second, I stepped several feet back and used 4× zoom while keeping the face approximately the same size in the frame.</p>
+        </div>
+      </div>
+
+      <div class="photo-grid portrait-grid">
+        <figure class="photo-card reveal">
+          <div class="photo-wrap portrait-wrap">
+            <img src="assets/portrait-1x.jpg" alt="Close-range portrait photographed with the 1× lens" loading="eager">
+            <span class="zoom-badge">1×</span>
+          </div>
+          <figcaption>
+            <strong>Close & wide</strong>
+            <span>The nose and center of the face sit much closer to the camera, so they appear proportionally larger.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-card reveal">
+          <div class="photo-wrap portrait-wrap">
+            <img src="assets/portrait-4x.jpg" alt="Portrait photographed from farther away with the 4× telephoto lens" loading="eager">
+            <span class="zoom-badge">4×</span>
+          </div>
+          <figcaption>
+            <strong>Far & telephoto</strong>
+            <span>From farther away, the relative distances across the face become smaller and the proportions look flatter and more natural.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <aside class="insight reveal">
+        <span class="insight-label">What changed?</span>
+        <p>Zoom restored the framing, but <strong>camera position created the perspective.</strong> The close camera exaggerates depth; the distant camera compresses it.</p>
+      </aside>
+    </section>
+
+    <section class="project-section architecture-section" id="architecture" aria-labelledby="architecture-title">
+      <div class="section-intro reveal">
+        <p class="section-number">02</p>
+        <div>
+          <p class="eyebrow">Architectural perspective compression</p>
+          <h2 id="architecture-title">The building folds in on itself.</h2>
+          <p>I first photographed the angled facade from far away at 4×. Then I walked toward it and switched to 1×, matching the building's size as closely as possible.</p>
+        </div>
+      </div>
+
+      <div class="photo-grid architecture-grid">
+        <figure class="photo-card reveal">
+          <div class="photo-wrap building-wrap">
+            <img src="assets/building-4x.jpg" alt="Building facade photographed from far away at 4× zoom" loading="lazy">
+            <span class="zoom-badge">4× · FAR</span>
+          </div>
+          <figcaption>
+            <strong>Compressed</strong>
+            <span>The repeating columns and arches appear closer in size, making the facade feel flatter.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-card reveal">
+          <div class="photo-wrap building-wrap">
+            <img src="assets/building-1x.jpg" alt="The same building facade photographed from nearby at 1× zoom" loading="lazy">
+            <span class="zoom-badge">1× · NEAR</span>
+          </div>
+          <figcaption>
+            <strong>Expanded</strong>
+            <span>Up close, the nearest columns loom larger while the others recede, creating stronger convergence and depth.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <aside class="insight reveal">
+        <span class="insight-label">Reading the geometry</span>
+        <p>The long roofline and repeating arches make the change easy to see: the 1× view exaggerates their recession, while the distant 4× view visually stacks them together.</p>
+      </aside>
+    </section>
+
+    <section class="project-section dolly-section" id="dolly" aria-labelledby="dolly-title">
+      <div class="section-intro reveal">
+        <p class="section-number">03</p>
+        <div>
+          <p class="eyebrow">The dolly zoom</p>
+          <h2 id="dolly-title">A still subject. A moving world.</h2>
+          <p>I moved backward while continuously zooming in, using the palm trunk as a fixed visual anchor. I sampled nine frames from the move and combined them into a forward-and-reverse loop.</p>
+        </div>
+      </div>
+
+      <div class="dolly-stage reveal">
+        <div class="gif-frame">
+          <img src="assets/dolly-zoom.gif" alt="Animated dolly zoom with a palm-tree trunk staying centered as the pool and building in the background grow larger" loading="lazy">
+          <span class="motion-label motion-label-a">CAMERA ←</span>
+          <span class="motion-label motion-label-b">ZOOM →</span>
+        </div>
+        <div class="dolly-notes">
+          <div>
+            <span class="note-index">A</span>
+            <p><strong>Move back</strong><br>The camera-to-subject distance increases.</p>
+          </div>
+          <div>
+            <span class="note-index">B</span>
+            <p><strong>Zoom in</strong><br>The subject remains roughly the same size.</p>
+          </div>
+          <div>
+            <span class="note-index">C</span>
+            <p><strong>Watch the background</strong><br>The pool and building seem to rush forward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>CS 180 · Intro to Computer Vision and Computational Photography</p>
+    <p>Photographed on iPhone 17 Pro · 2026</p>
+  </footer>
+</body>
+</html>
