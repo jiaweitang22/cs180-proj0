@@ -604,3 +604,193 @@ footer p {
     transition: none;
   }
 }
+
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.48in;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    background: var(--paper);
+    font-size: 10pt;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .site-header {
+    position: static;
+    min-height: 42px;
+    padding: 0 0.2in;
+    background: var(--paper);
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  .hero {
+    display: block;
+    min-height: 0;
+    padding: 0.65in 0.25in 0.3in;
+    break-after: page;
+  }
+
+  .hero-copy {
+    max-width: 6.7in;
+  }
+
+  h1 {
+    font-size: 64pt;
+    line-height: 0.9;
+  }
+
+  .lede {
+    max-width: 5.8in;
+    margin: 0.25in 0;
+    font-size: 12pt;
+  }
+
+  .hero-graphic {
+    display: none;
+  }
+
+  .project-section {
+    padding: 0.2in 0;
+    border: 0;
+    break-before: page;
+  }
+
+  .section-intro {
+    grid-template-columns: 0.52in 1fr;
+    gap: 0.22in;
+    max-width: none;
+    margin: 0 0 0.22in;
+  }
+
+  .section-number {
+    font-size: 34pt;
+  }
+
+  h2 {
+    max-width: none;
+    font-size: 37pt;
+  }
+
+  .section-intro div > p:last-child {
+    max-width: 6.2in;
+    margin: 0.12in 0 0;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.07in;
+    font-size: 6.5pt;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.22in;
+  }
+
+  .photo-wrap {
+    box-shadow: none;
+  }
+
+  .portrait-wrap,
+  .building-wrap {
+    aspect-ratio: 3 / 3.7;
+  }
+
+  .zoom-badge {
+    top: 0.1in;
+    left: 0.1in;
+    padding: 0.04in 0.08in;
+    font-size: 6pt;
+  }
+
+  figcaption {
+    display: block;
+    padding-top: 0.1in;
+    font-size: 7.5pt;
+    line-height: 1.4;
+  }
+
+  figcaption strong {
+    display: block;
+    margin-bottom: 0.04in;
+    font-size: 7pt;
+  }
+
+  .insight {
+    grid-template-columns: 1.15in 1fr;
+    gap: 0.18in;
+    max-width: none;
+    margin: 0.2in auto 0;
+    padding-top: 0.12in;
+  }
+
+  .insight-label {
+    font-size: 6pt;
+  }
+
+  .insight p {
+    font-size: 17pt;
+  }
+
+  .dolly-stage {
+    grid-template-columns: 3.25in 1fr;
+    gap: 0.35in;
+    max-width: 6.8in;
+  }
+
+  .gif-frame {
+    width: 3.05in;
+    padding: 0.06in;
+    box-shadow: none;
+  }
+
+  .motion-label {
+    padding: 0.04in 0.07in;
+    font-size: 5.5pt;
+  }
+
+  .motion-label-a {
+    left: -0.08in;
+  }
+
+  .motion-label-b {
+    right: -0.08in;
+  }
+
+  .dolly-notes > div {
+    grid-template-columns: 0.28in 1fr;
+    gap: 0.08in;
+    padding: 0.13in 0;
+  }
+
+  .note-index {
+    font-size: 14pt;
+  }
+
+  .dolly-notes p,
+  .dolly-notes strong {
+    font-size: 7pt;
+    line-height: 1.35;
+  }
+
+  footer {
+    padding: 0.12in 0.2in;
+    font-size: 5.5pt;
+  }
+}
